@@ -49,6 +49,19 @@ public class CategoryDAO {
             LOG.log(Level.WARNING, "Error on addCategory", e);
         }
     }
+
+    public void updateCategory(Category oldCategoryName, Category newCategoryName) {s
+        try {
+            List<Category> categories = getCategories();
+            int indexOfCurrentCategory = categories.indexOf(oldCategoryName);
+            categories.set( indexOfCurrentCategory, newCategoryName);
+
+            Files.writeString(Paths.get(PATH), objectMapper.writeValueAsString(categories));
+        } catch (IOException e) {
+            e.printStackTrace();
+            LOG.log(Level.WARNING, "Error on addCategory", e);
+        }
+    }
     public void deleteCategory(Category category) {
         try {
             List<Category> categories = getCategories();

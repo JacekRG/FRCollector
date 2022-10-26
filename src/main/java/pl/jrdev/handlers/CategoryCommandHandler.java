@@ -63,6 +63,16 @@ public class CategoryCommandHandler extends BaseCommandHandler {
                 categoryDAO.deleteCategory(new Category(categoryName));
                 break;
 
+            case UPT:
+                LOG.info("Update category");
+                if (command.getParam().size() != 2) {
+                    throw new IllegalArgumentException("wrong command format. Check help for more info");
+                }
+                String oldCategoryName = command.getParam().get(0);
+                String newCategoryName = command.getParam().get(1);
+                categoryDAO.updateCategory(new Category(oldCategoryName), new Category(newCategoryName));
+                break;
+
             default:
                 throw new IllegalArgumentException(String.format("Unknown action: %s from command: %s", command.getAction(), command.getCommand()));
         }

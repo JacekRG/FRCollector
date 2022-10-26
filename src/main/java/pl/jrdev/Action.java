@@ -3,7 +3,7 @@ package pl.jrdev;
 import java.util.Objects;
 
 public enum Action {
-    LIST("list"), ADD("add"), DEL("del"), UPDATE("upt"),
+    LIST("list"), ADD("add"), DEL("del"), UPT("upt"),
     HELP("help");
 
     private final String value;

@@ -1,1 +1,1 @@
-[{"name":"Main Dishes"},{"name":"Appetizers"},{"name":"Desserts"},{"name":"Test Category"},{"name":"Soup"}]
+[{"name":"Soup"},{"name":"Desserts"},{"name":"Main dishes"},{"name":"Appetizers"}]
