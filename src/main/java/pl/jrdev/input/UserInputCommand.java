@@ -1,5 +1,7 @@
 package pl.jrdev.input;
 
+import pl.jrdev.Action;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +9,7 @@ public class UserInputCommand {
 
     private String command;
 
-    private String action;
+    private Action action;
 
     private List<String> param;
 
@@ -18,7 +20,7 @@ public class UserInputCommand {
                 command = array[0];
             }
             if (array.length > 1) {
-                action = array[1];
+                action = Action.of(array[1]);
             }
             param = new ArrayList<>();
             for (int i = 2; i < array.length; i++) {
@@ -31,7 +33,7 @@ public class UserInputCommand {
         return command;
     }
 
-    public String getAction() {
+    public Action getAction() {
         return action;
     }
 

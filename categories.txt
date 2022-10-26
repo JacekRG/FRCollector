@@ -1,5 +1,1 @@
-Appetizers
-Soup
-Main Dishes
-Desserts
-Drinks
+[{"name":"Main Dishes"},{"name":"Appetizers"},{"name":"Desserts"},{"name":"Test Category"},{"name":"Soup"}]

@@ -12,7 +12,7 @@ public class HelpCommandHandler extends BaseCommandHandler {
         System.out.println("---Help---");
         System.out.println("Options: help, quit, category, addRecipe, deleteRecipe ");
         System.out.println("Command pattern: <command>_<action>_<param1>_<param2> ");
-        System.out.println("Example: recipe add recipeName");
+        System.out.println("Example: recipe_add_recipeName");
     }
 
     @Override
