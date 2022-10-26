@@ -49,6 +49,7 @@ public class FoodRecipeCollectorApplication {
 
             } catch (QuitFoodRecipeCollectorException e) {
                 LOG.info("---Quit---");
+                applicationLoop = false;
             } catch (IllegalArgumentException e) {
                 LOG.log(Level.WARNING, "Validation Exception", e.getMessage());
             } catch (Exception e) {

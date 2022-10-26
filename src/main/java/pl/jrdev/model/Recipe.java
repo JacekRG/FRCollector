@@ -1,20 +1,23 @@
 package pl.jrdev.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Recipe {
     private String name;
     private Category category;
-
+    private String categoryName;
 
     public Recipe() {
     }
+    public Recipe(String name) {
+        this.name = name;
+    }
 
-    public Recipe(String name, Category category) {
+    public Recipe(Category category, String name) {
         this.name = name;
         this.category = category;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

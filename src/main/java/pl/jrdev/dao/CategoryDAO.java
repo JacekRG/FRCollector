@@ -42,32 +42,39 @@ public class CategoryDAO {
         try {
             List<Category> categories = getCategories();
             categories.add(category);
+            saveCategories(categories);
 
-            Files.writeString(Paths.get(PATH), objectMapper.writeValueAsString(categories));
         } catch (IOException e) {
             e.printStackTrace();
             LOG.log(Level.WARNING, "Error on addCategory", e);
         }
     }
 
-    public void updateCategory(Category oldCategoryName, Category newCategoryName) {s
+    private void saveCategories(List<Category> categories) throws IOException {
+        Files.writeString(Paths.get(PATH), objectMapper.writeValueAsString(categories));
+    }
+
+    public void updateCategory(Category oldCategoryName, Category newCategoryName) {
+
         try {
             List<Category> categories = getCategories();
             int indexOfCurrentCategory = categories.indexOf(oldCategoryName);
-            categories.set( indexOfCurrentCategory, newCategoryName);
+            categories.set(indexOfCurrentCategory, newCategoryName);
+            saveCategories(categories);
 
-            Files.writeString(Paths.get(PATH), objectMapper.writeValueAsString(categories));
         } catch (IOException e) {
             e.printStackTrace();
-            LOG.log(Level.WARNING, "Error on addCategory", e);
+            LOG.log(Level.WARNING, "Error on updateCategory", e);
         }
     }
+
     public void deleteCategory(Category category) {
         try {
-            List<Category> categories = getCategories();
 
+            List<Category> categories = getCategories();
             categories.remove(category);
-            Files.writeString(Paths.get(PATH), objectMapper.writeValueAsString(categories));
+            saveCategories(categories);
+
         } catch (IOException e) {
             LOG.log(Level.WARNING, "Error combined with Category deletion", e);
         }
@@ -78,6 +85,4 @@ public class CategoryDAO {
                 .filter(c -> c.getName().equals(categoryName))
                 .findAny();
     }
-
-
 }

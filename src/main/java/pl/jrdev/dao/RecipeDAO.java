@@ -39,6 +39,7 @@ public class RecipeDAO {
             return new ArrayList<>();
         }
     }
+
     public Optional<Recipe> findOneRecipe(String recipeName) {
         return getRecipes().stream()
                 .filter(c -> c.getName().equals(recipeName))
@@ -46,17 +47,27 @@ public class RecipeDAO {
     }
 
     public void addRecipe(Recipe recipe) {
-
         List<Recipe> recipes = getRecipes();
         recipes.add(recipe);
-
         saveRecipes(recipes);
     }
-    public void deleteRecipe(Recipe recipe) {
 
+    public void updateRecipe(Recipe oldRecipeName, Recipe newRecipeName) {
+        try {
+            List<Recipe> recipes = getRecipes();
+            int indexOfCurrentCategory = recipes.indexOf(oldRecipeName);
+            recipes.set(indexOfCurrentCategory, newRecipeName);
+            saveRecipes(recipes);
+
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            LOG.log(Level.WARNING, "Error on updateRecipe", e);
+        }
+    }
+
+    public void deleteRecipe(Recipe recipe) {
         List<Recipe> recipes = getRecipes();
         recipes.remove(recipe);
-
         saveRecipes(recipes);
     }
 

@@ -14,11 +14,6 @@ public class QuitCommandHandler extends BaseCommandHandler {
     }
 
     @Override
-    public boolean canHandle(String name) {
-        return COMMAND_NAME.equals(name);
-    }
-
-    @Override
     protected String getCommandName() {
         return COMMAND_NAME;
     }

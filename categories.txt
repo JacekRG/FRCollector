@@ -1,1 +1,1 @@
-[{"name":"Soup"},{"name":"Desserts"},{"name":"Main dishes"},{"name":"Appetizers"}]
+[{"name":"Desserts"},{"name":"Main dishes"},{"name":"Appetizers"},{"name":"Paleo"},{"name":"Crazy"},{"name":"Soup"}]

@@ -3,7 +3,7 @@ package pl.jrdev;
 import java.util.Objects;
 
 public enum Action {
-    LIST("list"), ADD("add"), DEL("del"), UPT("upt"),
+    LIST("list"), ADD("add"), DEL("delete"), UPT("update"),
     HELP("help");
 
     private final String value;
@@ -19,5 +19,9 @@ public enum Action {
             }
         }
         throw new IllegalArgumentException("Unknown action: " + value);
+    }
+
+    public String getValue() {
+        return value;
     }
 }
