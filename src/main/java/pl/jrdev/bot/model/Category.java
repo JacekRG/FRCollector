@@ -1,13 +1,10 @@
-package pl.jrdev.model;
+package pl.jrdev.bot.model;
 
-import java.util.List;
 import java.util.Objects;
 
 public class Category {
 
     private String name;
-
-    private List<Category> oldAndNewCategories;
 
     public Category() {
     }
@@ -30,16 +27,17 @@ public class Category {
                 "name='" + name + '\'' +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Category category = (Category) o;
-        return Objects.equals(name, category.name) && Objects.equals(oldAndNewCategories, category.oldAndNewCategories);
+        return Objects.equals(name, category.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, oldAndNewCategories);
+        return Objects.hash(name);
     }
 }

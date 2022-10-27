@@ -1,13 +1,12 @@
-package pl.jrdev.handlers;
+package pl.jrdev.bot.handlers;
 
-import pl.jrdev.dao.CategoryDAO;
-import pl.jrdev.dao.RecipeDAO;
-import pl.jrdev.input.UserInputCommand;
-import pl.jrdev.model.Category;
-import pl.jrdev.model.Recipe;
+import pl.jrdev.bot.dao.CategoryDAO;
+import pl.jrdev.bot.input.UserInputCommand;
+import pl.jrdev.bot.model.Recipe;
+import pl.jrdev.bot.dao.RecipeDAO;
+import pl.jrdev.bot.model.Category;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Logger;
 
 public class RecipeCommandHandler extends BaseCommandHandler {
@@ -57,7 +56,7 @@ public class RecipeCommandHandler extends BaseCommandHandler {
                 recipeDAO.addRecipe(new Recipe(category, recipeName));
                 break;
 
-            case UPT:
+            case UPTDATE:
                 LOG.info("Update recipe");
                 if (command.getParam().size() != 3) {
                     throw new IllegalArgumentException("wrong command format. Check help for more info");
@@ -70,7 +69,7 @@ public class RecipeCommandHandler extends BaseCommandHandler {
                 recipeDAO.updateRecipe(new Recipe(category, oldRecipeName), new Recipe(category, newRecipeName));
                 break;
 
-            case DEL:
+            case DELETE:
                 LOG.info("Delete recipe");
                 if (command.getParam().size() != 2) {
                     throw new IllegalArgumentException("wrong command format. Check help for more info");

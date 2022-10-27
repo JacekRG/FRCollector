@@ -1,8 +1,8 @@
-package pl.jrdev.dao;
+package pl.jrdev.bot.dao;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import pl.jrdev.model.Category;
+import pl.jrdev.bot.model.Category;
 
 import java.io.IOException;
 import java.nio.file.Files;

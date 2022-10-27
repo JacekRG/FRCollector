@@ -1,13 +1,11 @@
-package pl.jrdev.handlers;
+package pl.jrdev.bot.handlers;
 
-import pl.jrdev.model.Category;
-import pl.jrdev.dao.CategoryDAO;
-import pl.jrdev.input.UserInputCommand;
-import pl.jrdev.model.Recipe;
+import pl.jrdev.bot.dao.CategoryDAO;
+import pl.jrdev.bot.model.Category;
+import pl.jrdev.bot.input.UserInputCommand;
 
 import java.util.List;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 public class CategoryCommandHandler extends BaseCommandHandler {
 
@@ -52,10 +50,12 @@ public class CategoryCommandHandler extends BaseCommandHandler {
                 isCategoryAlreadyDefined = categoryDAO.findAllCategories().stream().map(Category::toString).toList().toString().contains(categoryName);
                 if (!isCategoryAlreadyDefined) {
                     categoryDAO.addCategory(new Category(categoryName));
-                } else throw new IllegalArgumentException("Category already exist");
+                } else {
+                    throw new IllegalArgumentException("Category already exist");
+                }
                 break;
 
-            case DEL:
+            case DELETE:
                 LOG.info("Delete category");
                 if (command.getParam().size() != 1) {
                     throw new IllegalArgumentException("wrong command format. Check help for more info");
@@ -66,7 +66,7 @@ public class CategoryCommandHandler extends BaseCommandHandler {
                 categoryDAO.deleteCategory(new Category(categoryName));
                 break;
 
-            case UPT:
+            case UPTDATE:
                 LOG.info("Update category");
                 if (command.getParam().size() != 2) {
                     throw new IllegalArgumentException("wrong command format. Check help for more info");

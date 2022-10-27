@@ -1,7 +1,7 @@
-package pl.jrdev.handlers;
+package pl.jrdev.bot.handlers;
 
-import pl.jrdev.QuitFoodRecipeCollectorException;
-import pl.jrdev.input.UserInputCommand;
+import pl.jrdev.bot.QuitFoodRecipeCollectorException;
+import pl.jrdev.bot.input.UserInputCommand;
 
 public class QuitCommandHandler extends BaseCommandHandler {
 

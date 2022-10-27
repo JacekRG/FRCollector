@@ -1,4 +1,4 @@
-package pl.jrdev.input;
+package pl.jrdev.bot.input;
 
 import java.util.Scanner;
 

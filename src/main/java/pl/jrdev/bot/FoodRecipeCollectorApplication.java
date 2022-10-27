@@ -1,8 +1,9 @@
-package pl.jrdev;
+package pl.jrdev.bot;
 
+import pl.jrdev.bot.handlers.*;
 import pl.jrdev.handlers.*;
-import pl.jrdev.input.UserInputCommand;
-import pl.jrdev.input.UserInputManager;
+import pl.jrdev.bot.input.UserInputCommand;
+import pl.jrdev.bot.input.UserInputManager;
 
 import java.util.ArrayList;
 import java.util.List;

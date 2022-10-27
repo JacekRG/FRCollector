@@ -1,6 +1,5 @@
-package pl.jrdev.input;
+package pl.jrdev.bot.input;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

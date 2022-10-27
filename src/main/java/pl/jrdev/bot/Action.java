@@ -1,9 +1,9 @@
-package pl.jrdev;
+package pl.jrdev.bot;
 
 import java.util.Objects;
 
 public enum Action {
-    LIST("list"), ADD("add"), DEL("delete"), UPT("update"),
+    LIST("list"), ADD("add"), DELETE("delete"), UPTDATE("update"),
     HELP("help");
 
     private final String value;

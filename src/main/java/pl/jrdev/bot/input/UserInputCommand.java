@@ -1,6 +1,6 @@
-package pl.jrdev.input;
+package pl.jrdev.bot.input;
 
-import pl.jrdev.Action;
+import pl.jrdev.bot.Action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,6 @@ public class UserInputCommand {
             }
         }
     }
-
     public String getCommand() {
         return command;
     }

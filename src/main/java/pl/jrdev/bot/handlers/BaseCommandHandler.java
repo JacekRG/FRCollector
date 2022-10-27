@@ -1,6 +1,4 @@
-package pl.jrdev.handlers;
-
-import pl.jrdev.input.UserInputCommand;
+package pl.jrdev.bot.handlers;
 
 abstract class BaseCommandHandler implements CommandHandler {
 

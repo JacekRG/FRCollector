@@ -1,12 +1,10 @@
-package pl.jrdev.model;
+package pl.jrdev.bot.model;
 
-import java.util.List;
 import java.util.Objects;
 
 public class Recipe {
     private String name;
     private Category category;
-    private String categoryName;
 
     public Recipe() {
     }
