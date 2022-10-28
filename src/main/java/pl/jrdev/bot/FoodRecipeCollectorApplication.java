@@ -1,7 +1,6 @@
 package pl.jrdev.bot;
 
 import pl.jrdev.bot.handlers.*;
-import pl.jrdev.handlers.*;
 import pl.jrdev.bot.input.UserInputCommand;
 import pl.jrdev.bot.input.UserInputManager;
 
@@ -13,7 +12,7 @@ import java.util.logging.Logger;
 
 public class FoodRecipeCollectorApplication {
 
-    private static Logger LOG = Logger.getLogger(FoodRecipeCollectorApplication.class.getName());
+    private static final Logger LOG = Logger.getLogger(FoodRecipeCollectorApplication.class.getName());
 
     public static void main(String[] args) {
         new FoodRecipeCollectorApplication().start();
