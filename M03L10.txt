@@ -1,0 +1,83 @@
+User stories:
+
+Jako <użytkownik> chcę <cel do osiągnęcie>  mieć możliwość przeglądania i dodawania pytań oraz odpowiedzi
+Definition of Done - DoD
+- Stworzona strona www z listą pytań
+- Stworzona strona www z pojedynczym pytaniem i listą odpowiedzi do tego pytania
+- Przygotowany formularz z możliwością dodawania nowych pytań
+- Przygotowany formularz z możliwością zostawienia odpowiedzi do konkretnego pytania.
+
+Jako <użytkownik> chcę <cel do osiągnęcie>  mieć możliwość odpowiadania na już istniejące pytania
+- Stworzony przycisk 'Odpowiedź', który znajduje się pod każdym pytaniem
+- Przygotowane okno pojawiające się naciśnięciu przycisku 'Odpowiedź, w którym możliwe jest wprowadzanie tekstu odpowiedzi
+- Stworzony przycisk 'Zaakceptuj', którego użycie zamyka okno odpowiedzi i zapisuje tę odpowiedź.
+
+
+Jako <użytkownik> chcę <cel do osiągnęcie>  mieć możliwość przeglądania pytań podobnych tematycznie np. wszystkie pytania o zwierzętach
+Jako <użytkownik> chcę <cel do osiągnęcie>  mieć możliwość edytowania swoich wpisów
+
+Jako <administrator> chcę <cel do osiągnęcie>  mieć możliwość usunięcia problematycznych pytań i odpowiedzi
+
+
+MVP - 100 ideas:
+1. Najważniejsza funkcjonalność - CORE: Pytania i Odpowiedzi,
+2. Kategorie: dodawanie, usuwanie, edycja
+
+ADR with Markdown:
+- opis problemu,
+- okoliczności,
+- rozwiązania alternatywne,
+- wnioski,
+- ostateczna decyzja.
+
+Szablon ADR:
+- Tytuł,
+- Status,
+- Kontekst,
+- Decyzja,
+- Konsekwencje.
+
+ADR
+Data 2022-10-30
+Status: Zaproponowany
+Kontekst: Potrzebujemy wsparcia do budowania projektu webowego oraz zarządzania zależnościami.
+Rozwiązanie powinno dobrze inregrować się z Java 17 oraz być wspierane przez Intellij Idea.
+Rozwiązania:
+- Opcja 1: Gradle
+- Opcja 2: Maven
+Decyzja:
+Oba framworki są szeroko stosowane, opracowane przez aktywne społeczności i zapewniają podobną wydajność.
+Ze względu na większe doświadczenie zespołu z Apache Maven - to właśnie on będzie łatwiejszy w adaptacji.
+Konsekwencje:
+Projekt 100 ideas wykorzysta Apache Maven do budowania aplikacji oraz zarządzania zależnościami.
+
+
+ADR
+-*Data* 2022-10-30
+-*Status:* Zaproponowany
+-*Kontekst:* Potrzebujemy biblioteki do przygotowania testów jednostkowych.
+Rozwiązanie powinno dobrze inregrować się z Java 17 oraz być wspierane przez Intellij Idea.
+-*Rozwiązania:*
+i.- Opcja 1: AssertJ'
+II. - Opcja 2: Hamcrest"
+-*Decyzja:*
+Obie biblioteki są szeroko stosowane, opracowane przez aktywne społeczności i zapewniają podobną wydajność.
+Ze względu na większe doświadczenie zespołu z AssertJ - to właśnie on będzie łatwiejszy w adaptacji.
+-*Konsekwencje:*
+Projekt 100 ideas wykorzysta AssertJ do przygotowania testów jednostkowych.
+
+
+ADR
+*Data* 2022-10-30
+*Status:* Zaproponowany
+*Kontekst:* Potrzebujemy bazy danych  do przechowywania danych aplikacji.
+Rozwiązanie powinno dobrze inregrować się z Java 17 oraz być wspierane przez Intellij Idea.
+*Rozwiązania:*
+- Opcja 1: MySQL 
+- Opcja 2: PostGreSQL
+- Opcja 3: MongoDB
+*Decyzja:*
+Ww. bazy danych są szeroko stosowane, opracowane przez aktywne społeczności i zapewniają podobną wydajność.
+Ze względu na większe doświadczenie zespołu z MySQL - to właśnie ta baza danych będzie łatwiejsza w adaptacji.
+*Konsekwencje:*
+Projekt 100 ideas wykorzysta MySQL do przechowywania danych.
